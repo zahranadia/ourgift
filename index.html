@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florist.id - Toko Bunga Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Florist.id</a>
+        <nav class="navbar">
+            <a href="#home">Beranda</a>
+            <a href="#about">Tentang</a>
+            <a href="#products">Produk</a>
+            <a href="#review">Ulasan</a>
+            <a href="#contact">Kontak</a>
+        </nav>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-btn"></i>
+            <i class="fas fa-shopping-cart" id="cart-btn"></i>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Bunga Segar Terbaik</h3>
+            <p>Pesan rangkaian bunga favoritmu dengan pengiriman cepat!</p>
+            <a href="#products" class="btn">Lihat Produk</a>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <h1 class="heading">Produk Pilihan</h1>
+        <div class="box-container">
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    
+                </div>
+                <div class="content">
+                    <h3>Bouquet Mawar Merah</h3>
+                    <div class="price">Rp180.000 <span>Rp200.000</span></div>
+                    <a href="#" class="btn">Tambah ke Keranjang</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="content">
+                    <h3>Bunga Lili Putih</h3>
+                    <div class="price">Rp150.000</div>
+                    <a href="#" class="btn">Tambah ke Keranjang</a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Info Kontak</h3>
+                <a href="#"><i class="fas fa-phone"></i> +62-123-4567</a>
+                <a href="#"><i class="fas fa-envelope"></i> info@florist.id</a>
+            </div>
+            </div>
+        <div class="credit">Dibuat oleh <span>Web Designer</span> | Semua Hak Cipta Dilindungi!</div>
+    </footer>
+
+    <script>
+        let navbar = document.querySelector('.navbar');
+        document.querySelector('#menu-btn').onclick = () =>{
+            navbar.classList.toggle('active');
+        }
+        window.onscroll = () =>{
+            navbar.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
