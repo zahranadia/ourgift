@@ -224,4 +224,14 @@ section{
     .heading{
         font-size: 3rem;
     }
+    /* ... di bagian atas file style.css, di dalam selector 'html' ... */
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem; /* <-- BARU: Tambahkan ini */
+    scroll-behavior: smooth;  /* <-- BARU: Tambahkan ini */
+}
+
+/* ... */
 }
