@@ -19,12 +19,21 @@
 html{
     font-size: 62.5%;
     overflow-x: hidden;
+    /* FIX 1: Smooth Scroll dan Offset untuk Fixed Header */
     scroll-padding-top: 6rem;
     scroll-behavior: smooth;
 }
 
 section{
     padding:2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    font-size: 3.5rem;
+    color:var(--black);
+    padding:1rem;
+    margin-bottom: 3rem;
 }
 
 .btn{
@@ -86,10 +95,10 @@ section{
 /* ---------------- HOME SECTION ---------------- */
 
 .home{
-    display: flex; /* Menggunakan Flexbox */
+    display: flex;
     align-items: center;
     min-height: 100vh;
-    background: url('path/to/flower-background.jpg') no-repeat; /* Ganti dengan gambar latar Anda */
+    background: url('path/to/flower-background.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     padding-top: 10rem;
@@ -98,7 +107,7 @@ section{
 .home .content{
     max-width: 50rem;
     text-align: left;
-    background: rgba(255, 255, 255, 0.7); /* Latar belakang semi transparan */
+    background: rgba(255, 255, 255, 0.7);
     padding: 2rem;
     border-radius: 1rem;
 }
@@ -117,23 +126,15 @@ section{
 
 /* ---------------- PRODUCTS SECTION ---------------- */
 
-.heading{
-    text-align: center;
-    font-size: 3.5rem;
-    color:var(--black);
-    padding:1rem;
-    margin-bottom: 3rem;
-}
-
 .products .box-container{
-    display: flex; /* Menggunakan Flexbox untuk kontainer produk */
+    display: flex;
     flex-wrap: wrap;
     gap:1.5rem;
     justify-content: center;
 }
 
 .products .box-container .box{
-    flex: 1 1 30rem; /* Setiap produk mengambil minimal 30rem, Flex grow dan shrink */
+    flex: 1 1 30rem;
     box-shadow: var(--box-shadow);
     border-radius: .5rem;
     border:var(--border);
@@ -166,6 +167,42 @@ section{
     text-decoration: line-through;
 }
 
+/* ---------------- ABOUT, REVIEW, FOOTER (Tambahkan styling Anda di sini) ---------------- */
+
+/* ---------------- CONTACT SECTION - UKURAN DIPERBAIKI ---------------- */
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .row form{
+    /* Membuat form mengambil ruang yang lebih besar (min 50rem) */
+    flex: 1 1 50rem; 
+    padding:2rem;
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+}
+
+.contact .row form .box{
+    /* Membuat input mengisi 100% lebar form */
+    width: 100%; 
+    padding:1.5rem;
+    font-size: 1.7rem;
+    color:var(--black);
+    text-transform: none;
+    border:var(--border);
+    margin:1rem 0;
+}
+
+.contact .row form textarea{
+    height: 15rem; /* Ketinggian yang memadai */
+    resize: none;
+}
+
 /* ---------------- MEDIA QUERIES (RESPONSIVENESS) ---------------- */
 
 @media (max-width:991px){
@@ -184,17 +221,18 @@ section{
 }
 
 @media (max-width:768px){
+    /* Pastikan styling kontak tidak ada di sini, ini hanya untuk navbar */
 
     .header .navbar{
         position: absolute;
         top:100%; left:0; right:0;
         background: #eee;
         border-top: var(--border);
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Animasi awal */
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 
     .header .navbar.active{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Animasi aktif */
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
     
     .header .navbar a{
@@ -206,45 +244,7 @@ section{
     }
     
     #menu-btn {
-        display: inline-block; /* Tampilkan tombol menu */
-        /* Styling untuk SECTION CONTACT */
-.contact .row{
-    display: flex;
-    flex-wrap: wrap; /* Penting untuk responsif */
-    gap: 1.5rem;
-    align-items: center;
-    justify-content: center; /* Untuk menempatkan form di tengah jika tidak ada map */
-}
-
-/* 2. Beri Form ukuran yang dominan */
-.contact .row form{
-    /* Ubah ini untuk memberi form ruang yang lebih besar */
-    /* Membuat form mengisi 100% lebar (atau minimal 50rem) di desktop */
-    flex: 1 1 50rem; 
-    padding:2rem;
-    border:var(--border);
-    box-shadow: var(--box-shadow);
-    border-radius: .5rem;
-}
-
-/* 3. Beri input form ukuran penuh */
-.contact .row form .box{
-    width: 100%; /* Membuat input dan textarea mengisi seluruh lebar form */
-    padding:1.5rem;
-    font-size: 1.7rem;
-    color:var(--black);
-    text-transform: none;
-    border:var(--border);
-    margin:1rem 0;
-}
-
-/* 4. Beri Textarea ketinggian yang memadai */
-.contact .row form textarea{
-    height: 15rem; /* Ketinggian yang cukup untuk pesan */
-    resize: none; /* Mencegah pengguna mengubah ukuran (opsional) */
-}
-
-/* ... CSS lainnya ... */
+        display: inline-block;
     }
 
     .home .content{
@@ -262,14 +262,4 @@ section{
     .heading{
         font-size: 3rem;
     }
-    /* ... di bagian atas file style.css, di dalam selector 'html' ... */
-
-html{
-    font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-padding-top: 6rem; /* <-- BARU: Tambahkan ini */
-    scroll-behavior: smooth;  /* <-- BARU: Tambahkan ini */
-}
-
-/* ... */
 }
