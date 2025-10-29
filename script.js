@@ -11,3 +11,7 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 }
 
+const Tentang = document.getElementById('Tentang');
+Tentang.addEventListener('click', function() {
+  alert('a flowers shop made by Zavi & Zara');
+});
