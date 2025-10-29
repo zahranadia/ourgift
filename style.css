@@ -19,7 +19,6 @@
 html{
     font-size: 62.5%;
     overflow-x: hidden;
-    /* FIX 1: Smooth Scroll dan Offset untuk Fixed Header */
     scroll-padding-top: 6rem;
     scroll-behavior: smooth;
 }
@@ -50,8 +49,6 @@ section{
 .btn:hover{
     background: var(--black);
 }
-
-/* ---------------- HEADER ---------------- */
 
 .header{
     position: fixed;
@@ -89,10 +86,9 @@ section{
 }
 
 #menu-btn {
-    display: none; /* Sembunyikan tombol menu di desktop */
+    display: none;
 }
 
-/* ---------------- HOME SECTION ---------------- */
 
 .home{
     display: flex;
@@ -124,8 +120,6 @@ section{
     padding:1rem 0;
 }
 
-/* ---------------- PRODUCTS SECTION ---------------- */
-
 .products .box-container{
     display: flex;
     flex-wrap: wrap;
@@ -145,7 +139,6 @@ section{
 
 .products .box-container .box .image {
     padding: 1rem;
-    /* Tambahkan styling gambar produk di sini */
 }
 
 .products .box-container .box .content h3{
@@ -167,9 +160,6 @@ section{
     text-decoration: line-through;
 }
 
-/* ---------------- ABOUT, REVIEW, FOOTER (Tambahkan styling Anda di sini) ---------------- */
-
-/* ---------------- CONTACT SECTION - UKURAN DIPERBAIKI ---------------- */
 .contact .row{
     display: flex;
     flex-wrap: wrap;
@@ -179,7 +169,6 @@ section{
 }
 
 .contact .row form{
-    /* Membuat form mengambil ruang yang lebih besar (min 50rem) */
     flex: 1 1 50rem; 
     padding:2rem;
     border:var(--border);
@@ -188,7 +177,6 @@ section{
 }
 
 .contact .row form .box{
-    /* Membuat input mengisi 100% lebar form */
     width: 100%; 
     padding:1.5rem;
     font-size: 1.7rem;
@@ -199,11 +187,10 @@ section{
 }
 
 .contact .row form textarea{
-    height: 15rem; /* Ketinggian yang memadai */
+    height: 15rem;
     resize: none;
 }
 
-/* ---------------- MEDIA QUERIES (RESPONSIVENESS) ---------------- */
 
 @media (max-width:991px){
 
@@ -221,8 +208,6 @@ section{
 }
 
 @media (max-width:768px){
-    /* Pastikan styling kontak tidak ada di sini, ini hanya untuk navbar */
-
     .header .navbar{
         position: absolute;
         top:100%; left:0; right:0;
