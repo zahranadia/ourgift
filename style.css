@@ -95,8 +95,8 @@ section{
     align-items: center;
     min-height: 100vh;
     background: url('bungaa.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: 5rem;
+    background-position: right center;
     padding-top: 10rem;
 }
 
