@@ -95,9 +95,9 @@ section{
     align-items: center;
     min-height: 100vh;
     background: url('bungaa.jpg') no-repeat;
-    background-size: 5rem;
-    background-position: right center;
-    padding-top: 10rem;
+    background-size: 10rem;
+    background-position: right;
+  
 }
 
 .home .content{
